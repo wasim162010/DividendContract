@@ -1,0 +1,543 @@
+{
+  "contractName": "IDividends",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "recordDividend",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "payee",
+          "type": "address"
+        }
+      ],
+      "name": "getWithdrawableDividend",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "dest",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawDividend",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"payee\",\"type\":\"address\"}],\"name\":\"getWithdrawableDividend\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"recordDividend\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"dest\",\"type\":\"address\"}],\"name\":\"withdrawDividend\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getWithdrawableDividend(address)\":{\"returns\":{\"_0\":\"the withdrawable dividend.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getWithdrawableDividend(address)\":{\"notice\":\"Get current withdrawable dividend for given payee.\"},\"recordDividend()\":{\"notice\":\"Record a new dividend to be paid to all current token holders. Dividend amount equals `msg.value`. Each token holder should be assigned a percentage of dividend according  to their proportion of the token supply. Throws an error if no ETH is supplied.\"},\"withdrawDividend(address)\":{\"notice\":\"Withdraw dividend assigned to caller to given destination address. The dividend ETH will be transferred to the caller and the internal dividend balance set to 0.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IDividends.sol\":\"IDividends\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IDividends.sol\":{\"keccak256\":\"0xde1b5bcfef68ae2a531235aa6c13c83be43d300dc0d13e1414bceeccc65919f0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8b421eebd501bd407e3679a594149dd2a45500f7d647527be4634c0fe3933fb3\",\"dweb:/ipfs/QmXKBwNez3anu4LypabkMJhQNm9NuuR6Zbw1GK14tY4TEe\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n// pragma solidity >=0.4.22 <0.9.0;\npragma solidity 0.8.4;\n\ninterface IDividends {\n  /**\n   * Record a new dividend to be paid to all current token holders.\n   *\n   * Dividend amount equals `msg.value`.\n   *\n   * Each token holder should be assigned a percentage of dividend according \n   * to their proportion of the token supply.\n   *\n   * Throws an error if no ETH is supplied.\n   */\n  function recordDividend() external payable;\n\n  /**\n   * Get current withdrawable dividend for given payee.\n   *\n   * @return the withdrawable dividend.\n   */\n  function getWithdrawableDividend(address payee) external view returns (uint256);\n\n  /**\n   * Withdraw dividend assigned to caller to given destination address.\n   *\n   * The dividend ETH will be transferred to the caller and the internal dividend balance set to 0.\n   */\n  function withdrawDividend(address payable dest) external;\n}\n",
+  "sourcePath": "/Users/wasim/temo/SumeruDividendContract/Sumeru/contracts/IDividends.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IDividends.sol",
+    "exportedSymbols": {
+      "IDividends": [
+        888
+      ]
+    },
+    "id": 889,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 869,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "68:22:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 888,
+        "linearizedBaseContracts": [
+          888
+        ],
+        "name": "IDividends",
+        "nameLocation": "102:10:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 870,
+              "nodeType": "StructuredDocumentation",
+              "src": "117:301:1",
+              "text": " Record a new dividend to be paid to all current token holders.\n Dividend amount equals `msg.value`.\n Each token holder should be assigned a percentage of dividend according \n to their proportion of the token supply.\n Throws an error if no ETH is supplied."
+            },
+            "functionSelector": "50ca7555",
+            "id": 873,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "recordDividend",
+            "nameLocation": "430:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 871,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "444:2:1"
+            },
+            "returnParameters": {
+              "id": 872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "463:0:1"
+            },
+            "scope": 888,
+            "src": "421:43:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 874,
+              "nodeType": "StructuredDocumentation",
+              "src": "468:110:1",
+              "text": " Get current withdrawable dividend for given payee.\n @return the withdrawable dividend."
+            },
+            "functionSelector": "a4138b9b",
+            "id": 881,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWithdrawableDividend",
+            "nameLocation": "590:23:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 876,
+                  "mutability": "mutable",
+                  "name": "payee",
+                  "nameLocation": "622:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 881,
+                  "src": "614:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "614:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "613:15:1"
+            },
+            "returnParameters": {
+              "id": 880,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 879,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 881,
+                  "src": "652:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 878,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "652:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "651:9:1"
+            },
+            "scope": 888,
+            "src": "581:80:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 882,
+              "nodeType": "StructuredDocumentation",
+              "src": "665:186:1",
+              "text": " Withdraw dividend assigned to caller to given destination address.\n The dividend ETH will be transferred to the caller and the internal dividend balance set to 0."
+            },
+            "functionSelector": "9c53c0ca",
+            "id": 887,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawDividend",
+            "nameLocation": "863:16:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 884,
+                  "mutability": "mutable",
+                  "name": "dest",
+                  "nameLocation": "896:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 887,
+                  "src": "880:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 883,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "880:15:1",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "879:22:1"
+            },
+            "returnParameters": {
+              "id": 886,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "910:0:1"
+            },
+            "scope": 888,
+            "src": "854:57:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 889,
+        "src": "92:821:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "68:846:1"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/IDividends.sol",
+    "exportedSymbols": {
+      "IDividends": [
+        888
+      ]
+    },
+    "id": 889,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 869,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "68:22:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 888,
+        "linearizedBaseContracts": [
+          888
+        ],
+        "name": "IDividends",
+        "nameLocation": "102:10:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 870,
+              "nodeType": "StructuredDocumentation",
+              "src": "117:301:1",
+              "text": " Record a new dividend to be paid to all current token holders.\n Dividend amount equals `msg.value`.\n Each token holder should be assigned a percentage of dividend according \n to their proportion of the token supply.\n Throws an error if no ETH is supplied."
+            },
+            "functionSelector": "50ca7555",
+            "id": 873,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "recordDividend",
+            "nameLocation": "430:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 871,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "444:2:1"
+            },
+            "returnParameters": {
+              "id": 872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "463:0:1"
+            },
+            "scope": 888,
+            "src": "421:43:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 874,
+              "nodeType": "StructuredDocumentation",
+              "src": "468:110:1",
+              "text": " Get current withdrawable dividend for given payee.\n @return the withdrawable dividend."
+            },
+            "functionSelector": "a4138b9b",
+            "id": 881,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWithdrawableDividend",
+            "nameLocation": "590:23:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 876,
+                  "mutability": "mutable",
+                  "name": "payee",
+                  "nameLocation": "622:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 881,
+                  "src": "614:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "614:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "613:15:1"
+            },
+            "returnParameters": {
+              "id": 880,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 879,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 881,
+                  "src": "652:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 878,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "652:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "651:9:1"
+            },
+            "scope": 888,
+            "src": "581:80:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 882,
+              "nodeType": "StructuredDocumentation",
+              "src": "665:186:1",
+              "text": " Withdraw dividend assigned to caller to given destination address.\n The dividend ETH will be transferred to the caller and the internal dividend balance set to 0."
+            },
+            "functionSelector": "9c53c0ca",
+            "id": 887,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawDividend",
+            "nameLocation": "863:16:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 884,
+                  "mutability": "mutable",
+                  "name": "dest",
+                  "nameLocation": "896:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 887,
+                  "src": "880:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 883,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "880:15:1",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "879:22:1"
+            },
+            "returnParameters": {
+              "id": 886,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "910:0:1"
+            },
+            "scope": 888,
+            "src": "854:57:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 889,
+        "src": "92:821:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "68:846:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-12T04:13:00.489Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "getWithdrawableDividend(address)": {
+        "returns": {
+          "_0": "the withdrawable dividend."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getWithdrawableDividend(address)": {
+        "notice": "Get current withdrawable dividend for given payee."
+      },
+      "recordDividend()": {
+        "notice": "Record a new dividend to be paid to all current token holders. Dividend amount equals `msg.value`. Each token holder should be assigned a percentage of dividend according  to their proportion of the token supply. Throws an error if no ETH is supplied."
+      },
+      "withdrawDividend(address)": {
+        "notice": "Withdraw dividend assigned to caller to given destination address. The dividend ETH will be transferred to the caller and the internal dividend balance set to 0."
+      }
+    },
+    "version": 1
+  }
+}

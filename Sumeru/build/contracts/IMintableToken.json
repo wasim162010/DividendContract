@@ -1,0 +1,335 @@
+{
+  "contractName": "IMintableToken",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "dest",
+          "type": "address"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dest\",\"type\":\"address\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"burn(address)\":{\"details\":\"Burn caller's token balance and send the equivalent amount of ETH to given destination address.\"},\"mint()\":{\"details\":\"Deposit ETH and mint equal no. of tokens to the caller's balance. Throws error if no ETH is supplied.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IMintableToken.sol\":\"IMintableToken\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IMintableToken.sol\":{\"keccak256\":\"0x57517534fb0c82ce548bd7f38698a628f5c2b54be31f85b571d6669a03b56b1e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://51e8e80f55c00e42eed9ead4d2da2659c253f9f2ede59ca81ddd0da7a373d390\",\"dweb:/ipfs/QmXtpCZSuNYzqrExrHQZhyzqLhPB1driGQDpJcRBHQQ1sX\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n// pragma solidity >=0.4.22 <0.9.0;\npragma solidity 0.8.4;\n\ninterface IMintableToken {\n  /**\n   * @dev Deposit ETH and mint equal no. of tokens to the caller's balance.\n   *\n   * Throws error if no ETH is supplied.\n   */\n  function mint() external payable;\n\n  /**\n   * @dev Burn caller's token balance and send the equivalent amount of ETH to given destination address.\n   */\n  function burn(address  dest) external;\n}",
+  "sourcePath": "/Users/wasim/temo/SumeruDividendContract/Sumeru/contracts/IMintableToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IMintableToken.sol",
+    "exportedSymbols": {
+      "IMintableToken": [
+        949
+      ]
+    },
+    "id": 950,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 938,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "68:22:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 949,
+        "linearizedBaseContracts": [
+          949
+        ],
+        "name": "IMintableToken",
+        "nameLocation": "102:14:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 939,
+              "nodeType": "StructuredDocumentation",
+              "src": "121:131:3",
+              "text": " @dev Deposit ETH and mint equal no. of tokens to the caller's balance.\n Throws error if no ETH is supplied."
+            },
+            "functionSelector": "1249c58b",
+            "id": 942,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "264:4:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 940,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "268:2:3"
+            },
+            "returnParameters": {
+              "id": 941,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:3"
+            },
+            "scope": 949,
+            "src": "255:33:3",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 943,
+              "nodeType": "StructuredDocumentation",
+              "src": "292:115:3",
+              "text": " @dev Burn caller's token balance and send the equivalent amount of ETH to given destination address."
+            },
+            "functionSelector": "89afcb44",
+            "id": 948,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "419:4:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 946,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 945,
+                  "mutability": "mutable",
+                  "name": "dest",
+                  "nameLocation": "433:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 948,
+                  "src": "424:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 944,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "424:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "423:15:3"
+            },
+            "returnParameters": {
+              "id": 947,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "447:0:3"
+            },
+            "scope": 949,
+            "src": "410:38:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 950,
+        "src": "92:358:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "68:382:3"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/IMintableToken.sol",
+    "exportedSymbols": {
+      "IMintableToken": [
+        949
+      ]
+    },
+    "id": 950,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 938,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "68:22:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 949,
+        "linearizedBaseContracts": [
+          949
+        ],
+        "name": "IMintableToken",
+        "nameLocation": "102:14:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 939,
+              "nodeType": "StructuredDocumentation",
+              "src": "121:131:3",
+              "text": " @dev Deposit ETH and mint equal no. of tokens to the caller's balance.\n Throws error if no ETH is supplied."
+            },
+            "functionSelector": "1249c58b",
+            "id": 942,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "264:4:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 940,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "268:2:3"
+            },
+            "returnParameters": {
+              "id": 941,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:3"
+            },
+            "scope": 949,
+            "src": "255:33:3",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 943,
+              "nodeType": "StructuredDocumentation",
+              "src": "292:115:3",
+              "text": " @dev Burn caller's token balance and send the equivalent amount of ETH to given destination address."
+            },
+            "functionSelector": "89afcb44",
+            "id": 948,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "419:4:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 946,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 945,
+                  "mutability": "mutable",
+                  "name": "dest",
+                  "nameLocation": "433:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 948,
+                  "src": "424:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 944,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "424:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "423:15:3"
+            },
+            "returnParameters": {
+              "id": 947,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "447:0:3"
+            },
+            "scope": 949,
+            "src": "410:38:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 950,
+        "src": "92:358:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "68:382:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-12T04:13:00.493Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "burn(address)": {
+        "details": "Burn caller's token balance and send the equivalent amount of ETH to given destination address."
+      },
+      "mint()": {
+        "details": "Deposit ETH and mint equal no. of tokens to the caller's balance. Throws error if no ETH is supplied."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
