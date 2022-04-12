@@ -1,13 +1,6 @@
 
 var assert = require('assert');
-// const Div = artifacts.require("Token");
 const Div = artifacts.require("DividendContApproachOne");
-
-/*
- * uncomment accounts to access the test accounts made available by the
- * Ethereum client
- * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
- */
 
 contract("Div", function (accounts) {
   var token;
@@ -15,7 +8,6 @@ contract("Div", function (accounts) {
 
   beforeEach(async () => {
     token = await Div.new()
-   
   })
 
   
@@ -151,12 +143,10 @@ contract("Div", function (accounts) {
     it('can burn total and update dividend', async () => {
       
       await token.burn(accounts[0]);
-
-          //using toString() to accomondate large values
+      assert.equal(await token.balanceOf(accounts[0]), 0)
+        //using toString() to accomondate large values
       assert.equal((await token.getUserDividendPerToken(accounts[0])).toString(),'999000999000999000')
  
-      
-    
     })
   
   })
