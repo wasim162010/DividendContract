@@ -155,6 +155,7 @@ contract("Div", function (accounts) {
           //using toString() to accomondate large values
       assert.equal((await token.getUserDividendPerToken(accounts[0])).toString(),'999000999000999000')
  
+      
     
     })
   

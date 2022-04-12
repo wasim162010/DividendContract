@@ -131,6 +131,7 @@ contract DividendContApproachTwo is IERC20, IMintableToken, IDividends {
     constructor() public {  
         owner = msg.sender;
         totalSupply_ = 100000;
+        
     }
 
  
