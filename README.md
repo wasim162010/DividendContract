@@ -126,6 +126,7 @@ Few Screenshots :
 <img width="675" alt="image" src="https://user-images.githubusercontent.com/47940538/162899589-cf6bc6fc-2a37-4ea7-974e-d60ad6670b12.png">
 
 Testing screenshots of the console log :
+
 <img width="495" alt="image" src="https://user-images.githubusercontent.com/47940538/162899862-327d9ce2-5f1d-4c98-a17b-3020c64149f9.png">
 
 
