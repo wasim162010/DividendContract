@@ -109,7 +109,7 @@ contract("Div", function (accounts) {
     beforeEach(async () => {
       await token.mint({ value: 100 })
       await token.mint({ from: accounts[1], value: 500 })
-      await token.recordDividend({ from: accounts[5], value: 100000 })
+      await token.recordDividend({ from: accounts[0], value: 100000 })
     })
 
   

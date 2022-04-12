@@ -130,6 +130,7 @@ contract DividendContApproachOne is IERC20, IMintableToken, IDividends {
     constructor() public {
 
         totalSupply_ = 100000;
+        owner = msg.sender;
 
     }
 
@@ -234,14 +235,14 @@ function getUserDividendPerToken(address addr) public view returns(uint256) {
 
   // IDividends
 
-  function recordDividend() external payable override {
+  function recordDividend() external onlyOwner payable override {
 
         require(totalSupply() != 0, "No tokens minted");
         dividendPerToken += msg.value * MULTIPLIER / totalSupply();
 
   }
 
-  
+
    function getWithdrawableDividend(address payee) external  view override returns (uint256) {
    
         uint256 holderBalance = balance[payee];

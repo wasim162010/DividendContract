@@ -124,11 +124,13 @@ contract DividendContApproachTwo is IERC20, IMintableToken, IDividends {
     
     modifier onlyOwner() {
         require(msg.sender == owner);
+        
     _;
     }
 
-    constructor() public {
-
+    constructor() public {  
+        owner = msg.sender;
+        totalSupply_ = 100000;
     }
 
  
@@ -226,7 +228,7 @@ function balanceOf(address _owner) external view override returns(uint256) {
 
   // IDividends
 
-  function recordDividend() external payable override {
+  function recordDividend() external onlyOwner payable override {
 
      totalDividendPoints = totalDividendPoints.add((msg.value.mul(pointMultiplier)).div(totalSupply_));
      totalSupply_ = totalSupply_.add(msg.value);
@@ -252,12 +254,12 @@ function dividendsOwing(address investor) internal returns(uint256) {
         return (balances[investor].balance.mul(newDividendPoints)).div(pointMultiplier);
     }
 
-function disburse(uint256 amount)  onlyOwner public{
-        totalDividendPoints = totalDividendPoints.add((amount.mul(pointMultiplier)).div(totalSupply_));
-        totalSupply_ = totalSupply_.add(amount);
-        unclaimedDividends =  unclaimedDividends.add(amount);
+// function disburse(uint256 amount)  onlyOwner public{
+//         totalDividendPoints = totalDividendPoints.add((amount.mul(pointMultiplier)).div(totalSupply_));
+//         totalSupply_ = totalSupply_.add(amount);
+//         unclaimedDividends =  unclaimedDividends.add(amount);
    
-    }
+//     }
 
 //Events
    event Transfer(
