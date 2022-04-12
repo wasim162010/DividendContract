@@ -85,50 +85,62 @@ This modifiers purpose is to calculate/update the dividend owed by an account. A
 Screenshots of dividend calculations:
 
 1. Initial token supply
-￼
+<img width="686" alt="Pasted Graphic" src="https://user-images.githubusercontent.com/47940538/162893638-335a6bd4-6374-4350-b7c7-a018b0f5d668.png">
 
 2. Minting 100 , address : 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
 
-￼
-
-￼
+<img width="967" alt="Pasted Graphic 1" src="https://user-images.githubusercontent.com/47940538/162893698-38a71830-e3cf-435c-baa4-68d863c5a8eb.png">
+<img width="743" alt="Pasted Graphic 2" src="https://user-images.githubusercontent.com/47940538/162893730-fe31ec71-2e8f-45fd-b189-ef9d55bb0afc.png">
 
 
 3. Minting 500, address : 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2
-￼
-￼
+<img width="960" alt="Pasted Graphic 3" src="https://user-images.githubusercontent.com/47940538/162893745-0cc7c481-c91c-4ef3-8261-e8f3683b96cf.png">
+<img width="766" alt="Pasted Graphic 4" src="https://user-images.githubusercontent.com/47940538/162893758-07e7ffe4-7a9e-4acf-99b9-eb1ee51a9ad0.png">
 
 4. Calling recordDividend by passing 100000 twice
-￼
+<img width="972" alt="Pasted Graphic 5" src="https://user-images.githubusercontent.com/47940538/162893768-c52c2f13-1a18-4623-ab07-6982e473841f.png">
+<img width="954" alt="Pasted Graphic 6" src="https://user-images.githubusercontent.com/47940538/162893781-6566a06f-9df7-4f85-aba1-cf6866aeadc9.png">
 
-
-￼
 DividendperToken : 994035785288270377
-￼
-
+<img width="951" alt="Pasted Graphic 7" src="https://user-images.githubusercontent.com/47940538/162893795-3ba77a11-4bf9-425d-8ab3-70c55f5fc89d.png">
 Transferring 10 to account 2 [0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db]  from account 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
-￼
+<img width="744" alt="Pasted Graphic 8" src="https://user-images.githubusercontent.com/47940538/162893806-edf21e5f-66dd-4776-8491-2d20a405f0f0.png">
+<img width="913" alt="Pasted Graphic 9" src="https://user-images.githubusercontent.com/47940538/162893864-fcca39ed-dd2e-4622-a034-c5cb8f282bcb.png">
+
 ￼
 Checking ‘getWithdrawableDividend’ value post transfer,
 
-
+<img width="968" alt="Pasted Graphic 15" src="https://user-images.githubusercontent.com/47940538/162894057-0ac82eff-d784-499f-a8f9-f32c2b81f658.png">
 
 ￼
 Checking value of ‘getxDividendPerToken’
-￼
-￼
-Checking ‘getWithdrawableDividend’ value post transfer,
-￼
-￼
+<img width="749" alt="Pasted Graphic 12" src="https://user-images.githubusercontent.com/47940538/162894076-e537efa2-716c-443b-958b-a56ad8e91cf3.png">
 
-￼
-￼
+<img width="846" alt="Pasted Graphic 13" src="https://user-images.githubusercontent.com/47940538/162894087-4579fd24-d8c6-4966-a7e7-149d17d1b61d.png">
+
+Checking ‘getWithdrawableDividend’ value post transfer,
+
+<img width="944" alt="Pasted Graphic 16" src="https://user-images.githubusercontent.com/47940538/162894106-d1b05c93-60bd-40d2-882a-6d1b55d12eb6.png">
+
+<img width="773" alt="Pasted Graphic 17" src="https://user-images.githubusercontent.com/47940538/162894115-b3c148b2-9af7-492f-9496-b9ee08274980.png">
+
+<img width="944" alt="Pasted Graphic 18" src="https://user-images.githubusercontent.com/47940538/162894125-6a6360ac-6130-4c27-8aa9-334364421ab9.png">
+
+<img width="761" alt="Pasted Graphic 20" src="https://user-images.githubusercontent.com/47940538/162894143-545657eb-81eb-4e78-9b05-3b6300376442.png">
+
+
 
 Transferring the withdrawal dividend to the user account
-￼
 
-￼
+<img width="950" alt="Pasted Graphic 21" src="https://user-images.githubusercontent.com/47940538/162894172-9c09e259-63fa-46e4-ab3b-6e42c1051f32.png">
+<img width="782" alt="Pasted Graphic 22" src="https://user-images.githubusercontent.com/47940538/162894192-fd8c1f66-7e2d-4efe-8099-29bbbb22d31b.png">
+
 
 Verifying  ‘getWithdrawableDividend’ value post withdrawal
-￼
-￼   
+
+<img width="747" alt="Pasted Graphic 23" src="https://user-images.githubusercontent.com/47940538/162894214-d8bac9f3-6172-430a-8844-f77373cc7fec.png">
+
+
+<img width="938" alt="Pasted Graphic 24" src="https://user-images.githubusercontent.com/47940538/162894225-e93f8482-4e97-4bcf-a7d5-a51d8e0c6b11.png">
+
+
