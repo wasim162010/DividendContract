@@ -125,7 +125,8 @@ Few Screenshots :
 11. Verifying withdrawable dividend post withdraw
 <img width="675" alt="image" src="https://user-images.githubusercontent.com/47940538/162899589-cf6bc6fc-2a37-4ea7-974e-d60ad6670b12.png">
 
-12. Verify dividend change while buring token: <img width="651" alt="Pasted Graphic 27" src="https://user-images.githubusercontent.com/47940538/162986273-a249ac1f-7fe2-4c13-8427-db59cf251c18.png">
+12. Verify dividend change while buring token:
+ <img width="651" alt="Pasted Graphic 27" src="https://user-images.githubusercontent.com/47940538/162986273-a249ac1f-7fe2-4c13-8427-db59cf251c18.png">
 
 a) Mint 
 <img width="697" alt="Pasted Graphic 26" src="https://user-images.githubusercontent.com/47940538/162985843-10d5551d-5262-49cb-b215-c7fd29932def.png">
