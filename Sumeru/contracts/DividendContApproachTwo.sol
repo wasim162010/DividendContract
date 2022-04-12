@@ -91,24 +91,22 @@ library SafeMath {
 
 contract DividendContApproachTwo is IERC20, IMintableToken, IDividends {
  
-  using SafeMath for uint256;
+    using SafeMath for uint256;
 
-  uint256 public decimals = 18;
-  string public name = "Test token";
-  string public symbol = "TEST";
+    uint256 public decimals = 18;
+    string public name = "Test token";
+    string public symbol = "TEST";
 
-
-   // uint256 public totalSupply_ = 1000000;
     uint256 totalDividendPoints = 0;
     uint256 unclaimedDividends = 0;
     uint256 pointMultiplier = 1000000000000000000;
     address owner;
-    //  uint256 private _totalSupply;
+ 
      uint256 private totalSupply_;
     mapping (address => mapping (address => account)) internal allowed;
     struct account{
          uint256 balance;
-         uint256 lastDividendPoints;
+         uint256 lastDividend;
      }
     mapping(address => account) public balances;
 
@@ -117,7 +115,7 @@ contract DividendContApproachTwo is IERC20, IMintableToken, IDividends {
         if(owing > 0) {
             unclaimedDividends = unclaimedDividends.sub(owing);
             balances[investor].balance = balances[investor].balance.add(owing);
-            balances[investor].lastDividendPoints = totalDividendPoints;
+            balances[investor].lastDividend = totalDividendPoints;
             }
         _;
     }
@@ -238,17 +236,20 @@ function balanceOf(address _owner) external view override returns(uint256) {
   }
 
   function getWithdrawableDividend(address payee) external view override returns (uint256) {
-   
-        return balances[payee].lastDividendPoints;
+      
+        uint256 newDividendPoints = totalDividendPoints.sub(balances[payee].lastDividend);
+        return (balances[payee].balance.mul(newDividendPoints)).div(pointMultiplier);
   }
 
-
   function withdrawDividend(address payable dest) external override {
-       
+       uint256 newDividendPoints = totalDividendPoints.sub(balances[dest].lastDividend);
+       uint tobeTransferred  = (balances[dest].balance.mul(newDividendPoints)).div(pointMultiplier);
+       unclaimedDividends= unclaimedDividends.sub(tobeTransferred);
+       (bool success, ) = payable(dest).call{value: tobeTransferred}(""); 
   }
 
 function dividendsOwing(address investor) internal returns(uint256) {
-        uint256 newDividendPoints = totalDividendPoints.sub(balances[investor].lastDividendPoints);
+        uint256 newDividendPoints = totalDividendPoints.sub(balances[investor].lastDividend);
         return (balances[investor].balance.mul(newDividendPoints)).div(pointMultiplier);
     }
 

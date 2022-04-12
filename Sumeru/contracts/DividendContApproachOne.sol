@@ -97,6 +97,7 @@ contract DividendContApproachOne is IERC20, IMintableToken, IDividends {
     string public name = "Test token";
     string public symbol = "TEST";
 
+    // to take care of the rounding off error
     uint256 MULTIPLIER = 1000000000000000000;
     address owner;
     uint256 private totalSupply_;

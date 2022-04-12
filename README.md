@@ -9,6 +9,11 @@ As a part of my approach, I have created 2 smart contracts, namely ‘DividendCo
 # I went ahead and opted for for ‘DividendContApproachOne.sol’ and wrote test cased focusing it in mind.
 
 # I have written my own test cases when it comes to testing Dividend logic, and in it focused on calculating dividend during token balance change due to various operations and also to transfer it to the user.
+
+# In order to prevent the looping through records and calculating the dividends, and also to take care of the rounding off and take care of the floating point values, I am using below approach :
+a) for the rounding off error , I am using a big multiplier.
+b) In order to take care that a user cannot get a dividend more than one time. This can happen when a user post getting divided can transfer the token to another account and gets the dividend again. This code try to prevent user by updating dividend for sender and receivers before transfer.
+c) To prevent looping through the records to update the calculate/update dividend, I am using modifier 'updateDividend' which is applied to all the functions which updates the accounts involved in the token transfer/transaction. Irrespective of number of transaction, the user only need to calculate the dividend once.
  
 			DividendContApproachOne.sol : -					
 # IDividend function implementations
