@@ -129,13 +129,20 @@ Few Screenshots :
  <img width="651" alt="Pasted Graphic 27" src="https://user-images.githubusercontent.com/47940538/162986273-a249ac1f-7fe2-4c13-8427-db59cf251c18.png">
 
 a) Mint 
+
 <img width="697" alt="Pasted Graphic 26" src="https://user-images.githubusercontent.com/47940538/162985843-10d5551d-5262-49cb-b215-c7fd29932def.png">
+
 b) record dividend from owner account 
+
 <img width="687" alt="Pasted Graphic 25" src="https://user-images.githubusercontent.com/47940538/162985952-77d049e4-842d-4861-bb03-c085cc2d1001.png">
+
 c) burn token 
+
 <img width="1140" alt="image" src="https://user-images.githubusercontent.com/47940538/162986202-44eaba0a-d96f-4135-9577-0e88a52297c3.png">
 <img width="651" alt="Pasted Graphic 27" src="https://user-images.githubusercontent.com/47940538/162986299-aabc88d1-390e-4086-8d54-58711fcaeff3.png">
+
 d) check user dividend
+
 <img width="622" alt="image" src="https://user-images.githubusercontent.com/47940538/162986467-7868e59a-e2e2-4749-8da0-68e801ad25e9.png">
 
 
