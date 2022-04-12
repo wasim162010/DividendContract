@@ -126,7 +126,6 @@ Few Screenshots :
 <img width="675" alt="image" src="https://user-images.githubusercontent.com/47940538/162899589-cf6bc6fc-2a37-4ea7-974e-d60ad6670b12.png">
 
 12. Verify dividend change while buring token:
- <img width="651" alt="Pasted Graphic 27" src="https://user-images.githubusercontent.com/47940538/162986273-a249ac1f-7fe2-4c13-8427-db59cf251c18.png">
 
 a) Mint 
 
