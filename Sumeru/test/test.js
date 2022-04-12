@@ -35,12 +35,12 @@ contract("Div", function (accounts) {
      assert.equal((await token.totalSupply()).toNumber(), 100023)
      await token.mint({ value: 50 })
      assert.equal(await token.balanceOf(accounts[0]), 73)
-     assert.equal((await token.totalSupply()).toNumber(), 100073) //assert.equal(await token.totalSupply(),73) 
+     assert.equal((await token.totalSupply()).toNumber(), 100073) 
      assert.equal(await token.getBalance(token.address),73) 
      await token.mint({ value: 50, from: accounts[1] })
      assert.equal(await token.balanceOf(accounts[0]), 73)
      assert.equal(await token.balanceOf(accounts[1]), 50)
-     assert.equal((await token.totalSupply()).toNumber(), 100123) //assert.equal(await token.totalSupply(), 123)
+     assert.equal((await token.totalSupply()).toNumber(), 100123) 
      assert.equal(await token.getBalance(token.address), 123)
 
   })
@@ -115,11 +115,12 @@ contract("Div", function (accounts) {
   
     it('can generate dividend while minting', async () => {
     
-      //to accomondate large values
+        //using toString() to accomondate large values
       assert.equal((await token.getWithdrawableDividend(accounts[0])).toString(),'99403578528827037700')
       assert.equal((await token.getWithdrawableDividend(accounts[1])).toString(),'497017892644135188500')
 
       await token.transfer(accounts[2], 10, { from: accounts[0] })
+          //using toString() to accomondate large values
       assert.equal((await token.getUserDividendPerToken(accounts[0])).toString(),'994035785288270377')
       assert.equal((await token.getUserDividendPerToken(accounts[2])).toString(),'994035785288270377')
       assert.equal((await token.getUserDividendPerToken(accounts[1])).toString(),'0')
@@ -131,10 +132,30 @@ contract("Div", function (accounts) {
       
       await token.withdrawDividend(accounts[0])
       await token.withdrawDividend(accounts[1])
-
+      //using toString() to accomondate large values
       assert.equal((await token.getWithdrawableDividend(accounts[0])).toString(),'0')
       assert.equal((await token.getWithdrawableDividend(accounts[1])).toString(),'0')
 
+    })
+  
+  })
+
+  describe('can gnerate/update dividend on burning token', () => {
+    
+    beforeEach(async () => {
+      await token.mint({ from: accounts[0],value: 100 })
+      await token.recordDividend({ from: accounts[0], value: 100000 })
+    })
+
+  
+    it('can burn total and update dividend', async () => {
+      
+      await token.burn(accounts[0]);
+
+          //using toString() to accomondate large values
+      assert.equal((await token.getUserDividendPerToken(accounts[0])).toString(),'999000999000999000')
+ 
+    
     })
   
   })

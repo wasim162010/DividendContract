@@ -269,6 +269,7 @@ function _burn(address account, uint256 amount) internal {
        
         require(account != address(0), "ERC20: burn from the zero address");
         totalSupply_ = totalSupply_.sub(amount);
+        balance[account] = balance[account].sub(amount);
         emit Transfer(account, address(0), amount);
 
     }
