@@ -162,7 +162,7 @@ b) Compile and migrate the contract to deploy in the local blockchain
 
 <img width="907" alt="image" src="https://user-images.githubusercontent.com/47940538/163196429-2d4a2365-71fb-4a08-af14-af6f4a801d96.png">
 
-If the Ganache is not running in your machine, then you get the error[below screenshot] ,so start the Ganache.
+If the Ganache is not running in your machine, then you will get the error[below screenshot] during 'truffle migrate',so start the Ganache.
 
 <img width="739" alt="image" src="https://user-images.githubusercontent.com/47940538/163196614-9f21ded4-6b0d-4ec6-90e5-490e8413ce78.png">
 
