@@ -152,6 +152,31 @@ Testing screenshots of the console log :
 <img width="513" alt="image" src="https://user-images.githubusercontent.com/47940538/162985421-8539429f-b729-4545-bad9-4b5a95eb7c3b.png">
 
 
+-------------------------- STEPS TO RUN ---------------
+
+a) Post clone, run 'npm install'
+<img width="1261" alt="image" src="https://user-images.githubusercontent.com/47940538/163194386-13053401-13dc-422d-a95b-d570bb433908.png">
+b) Compile and migrate the contract to deploy in the local blockchain
+
+<img width="1238" alt="image" src="https://user-images.githubusercontent.com/47940538/163196029-fe860e53-05e9-41d3-8425-5db5a3965a86.png">
+
+<img width="907" alt="image" src="https://user-images.githubusercontent.com/47940538/163196429-2d4a2365-71fb-4a08-af14-af6f4a801d96.png">
+
+If the Ganache is not running in your machine, then you get the error[below screenshot] ,so start the Ganache.
+
+<img width="739" alt="image" src="https://user-images.githubusercontent.com/47940538/163196614-9f21ded4-6b0d-4ec6-90e5-490e8413ce78.png">
+
+c) Test the smart contract
+Post successful deployment, run 'truffle test'. It will run the test case for the contract. 
+
+<img width="529" alt="image" src="https://user-images.githubusercontent.com/47940538/163196973-bad53602-cc1f-42f3-982d-8b663ea528e5.png">
+
+
+
+
+
+
+
 
 
 
