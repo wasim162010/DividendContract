@@ -22,7 +22,7 @@
     "chai-as-promised": "^7.1.1",
     "ganache-cli": "^6.12.2",
     "ganache-core": "^2.13.2",
-    "truffle": "5.1.5",
+    "truffle": "^5.5.10",
     "web3": "^1.5.2"
   },
   "engines": {
